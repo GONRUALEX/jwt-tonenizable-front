@@ -2,9 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 
-![]([https://i.postimg.cc/FH8HsB7r/galeria.png])
-
-
+![](https://i.postimg.cc/Hn0k0Ftz/galeria.png)
 
 ## Development server
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TokenService } from './core/services/token.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'crudBasico';
+  constructor(private tokenService:TokenService){
+    this.tokenService.isLogged();
+    this.tokenService.isAdmin();
+  }
 }

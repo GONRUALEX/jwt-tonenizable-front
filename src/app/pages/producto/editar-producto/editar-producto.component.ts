@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Producto } from 'src/app/shared/model/producto';
-import { ProductoService } from 'src/app/shared/service/producto.service';
+import { ProductoService } from 'src/app/shared/model/service/producto.service';
 
 @Component({
   selector: 'app-editar-producto',

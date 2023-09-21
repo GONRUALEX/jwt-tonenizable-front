@@ -5,15 +5,15 @@ import { DetalleProductoComponent } from './pages/producto/detalle-producto/deta
 import { EditarProductoComponent } from './pages/producto/editar-producto/editar-producto.component';
 import { NuevoProductoComponent } from './pages/producto/nuevo-producto/nuevo-producto.component';
 import { IndexComponent } from './pages/index/index.component';
-import { LoginComponent } from './core/auth/login/login.component';
-import { RegistroComponent } from './core/auth/registro/registro.component';
 import { IsAdminGuard } from './core/guards/prod-guard.service';
 import { LoginGuard } from './core/guards/login.guard';
 import { SendEmailComponent } from './core/auth/chagePassword/send-email/send-email.component';
 import { ChangePasswordComponent } from './core/auth/chagePassword/change-password/change-password.component';
+import { PrincipalComponent } from './paypal/components/principal/principal.component';
 
 const routes: Routes = [
   {path:'', component: IndexComponent},
+  {path:'principal', component: PrincipalComponent},
   {path:'change-password/:tokenpassword', component: ChangePasswordComponent, canActivate:[LoginGuard]},
   {path:'lista', component: ListaProductoComponent, canActivate:[IsAdminGuard], data:{expectedRol: ['admin', 'user']}},
   {path:'detalle/:id', component: DetalleProductoComponent, canActivate:[IsAdminGuard], data:{expectedRol: ['admin', 'user']}},

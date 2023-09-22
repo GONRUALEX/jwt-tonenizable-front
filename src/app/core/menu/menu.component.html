@@ -16,7 +16,7 @@
 
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <button *ngIf="!isLogged" class="btn btn-outline-primary initzializer my-2 my-sm-0" data-toggle="modal" data-target=".bd-example-modal-lg">
+      <button *ngIf="!isLogged" class="btn btn-outline init initzializer my-2 my-sm-0" data-toggle="modal" data-target=".bd-example-modal-lg">
         <i class="fas fa-sign-in-alt"></i> Iniciar sesión
       </button>
       <button *ngIf="isLogged" class="btn btn-outline-danger logout my-2 my-sm-0" (click)="onLogout()">

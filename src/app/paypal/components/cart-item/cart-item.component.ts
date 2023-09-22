@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CartItemModel } from '../../model/car-item-model';
 
 @Component({
   selector: 'app-cart-item',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart-item.component.scss']
 })
 export class CartItemComponent {
+@Input() cartItem: CartItemModel;
 
+convertStringToNumber(input: string) { 
+    
+  if (!input) return NaN;
+
+  if (input.trim().length==0) { 
+      return NaN;
+  }
+  return Number(input);
+}
 }

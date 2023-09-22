@@ -4,3 +4,25 @@
   align-self: center;
   padding-top: 10px;
 }
+
+.btn-outline-success {
+  --bs-btn-color: teal !important;
+  --bs-btn-border-color: teal !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: teal !important;
+  --bs-btn-hover-border-color: hsl(180, 100%, 25%) !important;
+  --bs-btn-focus-shadow-rgb: 40,182,44 !important;
+  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-bg: teal !important;
+  --bs-btn-active-border-color: #008080 !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  --bs-btn-disabled-color: teal !important;
+  --bs-btn-disabled-bg: transparent !important;
+  --bs-btn-disabled-border-color: teal !important;
+  --bs-gradient: none !important;
+}
+
+.card{
+  border: none;
+  box-shadow: 2px 2px 12px -3px rgba(0, 128, 128, 0.7);
+}

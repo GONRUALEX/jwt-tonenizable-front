@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +28,8 @@ import { ProductListComponent } from './paypal/components/product-list/product-l
 import { ProductItemComponent } from './paypal/components/product-item/product-item.component';
 import { CartComponent } from './paypal/components/cart/cart.component';
 import { CartItemComponent } from './paypal/components/cart-item/cart-item.component';
-import { ModalComponent } from './paypal/components/modal/modal.component';
+import { NgxPayPalModule } from 'ngx-paypal';
+import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,6 @@ import { ModalComponent } from './paypal/components/modal/modal.component';
     ProductItemComponent,
     CartComponent,
     CartItemComponent,
-    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -62,9 +62,19 @@ import { ModalComponent } from './paypal/components/modal/modal.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxPayPalModule,
+    NgxLoadingModule.forRoot({
+      animationType: ngxLoadingAnimationTypes.cubeGrid,
+      backdropBackgroundColour: "rgb(0, 128, 128,0.2)",
+      backdropBorderRadius: "200px",
+      primaryColour: "#008080",
+      secondaryColour: "#ffffff",
+      tertiaryColour: "#ffffff",
+    }),
 
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })

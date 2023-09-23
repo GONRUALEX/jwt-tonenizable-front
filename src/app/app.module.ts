@@ -21,7 +21,6 @@ import { MenuComponent } from './core/menu/menu.component';
 import { ModalLoginComponent } from './core/auth/modal-login/modal-login.component';
 import { ValidationsComponent } from './shared/components/validations/validations.component';
 import { FormsComponent } from './shared/components/forms/forms.component';
-import { HeaderComponent } from './paypal/components/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { PrincipalComponent } from './paypal/components/principal/principal.component';
 import { ProductListComponent } from './paypal/components/product-list/product-list.component';
@@ -46,7 +45,6 @@ import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
     ModalLoginComponent,
     ValidationsComponent,
     FormsComponent,
-    HeaderComponent,
     FooterComponent,
     PrincipalComponent,
     ProductListComponent,

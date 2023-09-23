@@ -26,3 +26,21 @@
   border: none;
   box-shadow: 2px 2px 12px -3px rgba(0, 128, 128, 0.7);
 }
+
+.card-body{
+  height: 250px;
+}
+
+h5{
+  height: 50px;
+  overflow:hidden;
+  color: lightseagreen;
+    font-weight: 600;
+}
+
+.card-text{
+  height: 25px;
+  overflow:hidden;
+  color: darkturquoise;
+}
+

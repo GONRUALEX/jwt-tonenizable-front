@@ -31,6 +31,8 @@ export class CartComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    $('#modalPaypal').modal('show');
+  
     this.initConfig();
     if (this.storageService.existsCarts()) {
       this.cartItems = this.storageService.getCart();

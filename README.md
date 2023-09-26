@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![](https://i.postimg.cc/g2Z6748f/Nueva-imagen-de-mapa-de-bits.png)
 
-![](https://i.postimg.cc/MHgmRMdV/galeria.png)
+![](https://i.postimg.cc/C5Jk71yJ/Nueva-imagen-de-mapa-de-bits.png)
 
-![](https://i.postimg.cc/VNSGSw-Yx/galeria.png)
+![](https://i.postimg.cc/Z54X0sjS/Nueva-imagen-de-mapa-de-bits.png)
 
 ## Development server
 

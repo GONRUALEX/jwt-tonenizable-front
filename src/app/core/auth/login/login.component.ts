@@ -69,7 +69,7 @@ export class LoginComponent implements OnInit {
           500
         );
         this.reset();
-        this.router.navigate(['/']);
+        this.router.navigate(['/shop']);
       },
       error: (err) => {
         this.errMsj = err.error != null ? err.error.mensaje : 'No autorizado';

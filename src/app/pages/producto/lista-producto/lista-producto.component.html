@@ -2,21 +2,21 @@
   <table class="table table-striped  table-bordered table-hover">
     <thead >
       <tr>
-        <th scope="col" [style]="styleTh()">Id</th>
-        <th scope="col" [style]="styleTh()">Nombre</th>
-        <th scope="col" [style]="styleTh()">Precio</th>
-        <th scope="col" [style]="styleTh()">Ver detalle</th>
-        <th scope="col"  [style]="styleTh()" *ngIf="isAdmin">Editar</th>
-        <th scope="col"  [style]="styleTh()" *ngIf="isAdmin">Borrar</th>
+        <th scope="col" class="th-header">Id</th>
+        <th scope="col" class="th-header">Nombre</th>
+        <th scope="col" class="th-header">Precio</th>
+        <th scope="col" class="th-header">Ver detalle</th>
+        <th scope="col"  class="th-header" *ngIf="isAdmin">Editar</th>
+        <th scope="col"  class="th-header" *ngIf="isAdmin">Borrar</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let producto of productos" >
         <td>{{producto.id}}</td>
-        <td>{{producto.nombre}}</td>
-        <td>{{producto.precio}}</td>
-        <td><button class="btn btn-outline-primary" routerLink="/detalle/{{producto.id}}"> <i class="far fa-eye"></i> Ver</button></td>
-        <td  *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editar/{{producto.id}}"> <i class="far fa-edit">  </i>Editar</button></td>
+        <td>{{producto.name}}</td>
+        <td>{{producto.price}}</td>
+        <td><button class="btn btn-outline-primary" routerLink="/mantenimiento/detalle/{{producto.id}}"> <i class="far fa-eye"></i> Ver</button></td>
+        <td  *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/mantenimiento/editar/{{producto.id}}"> <i class="far fa-edit">  </i>Editar</button></td>
         <td  *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="borrar(producto.id!)"><i class="far fa-trash-alt"></i>Eliminar</button></td>
       </tr>
     </tbody>

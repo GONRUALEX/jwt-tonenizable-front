@@ -65,7 +65,7 @@ export class RegistroComponent implements OnInit {
         })
         this.close.emit(true);
         this.reset();
-        this.router.navigate(['/login']);
+        this.router.navigate(['/']);
       }, error: (err)=>{
         this.errMsj = err.error!=null? err.error.mensaje: "Algo a ocurrido, vuelve a intentarlo";
         this.toastr.error(this.errMsj +" 😒", 'Error en el registro', {

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Producto } from 'src/app/shared/model/producto';
-import { ProductoService } from 'src/app/shared/model/service/producto.service';
 import { TokenService } from '../../../core/services/token.service';
+import { Producto } from 'src/app/shared/model/product';
+import { ProductoService } from '../services/producto.service';
+
+
+
 
 @Component({
   selector: 'app-lista-producto',
@@ -19,6 +22,7 @@ export class ListaProductoComponent implements OnInit{
   ngOnInit(){
     this.cargarProductos();
     this.tokenService.getAdmin().subscribe(data=>{
+      console.log(data)
       this.isAdmin = data;
     })
   }

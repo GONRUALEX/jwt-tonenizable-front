@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductoService } from '../../../shared/model/service/producto.service';
-import { Producto } from 'src/app/shared/model/producto';
+
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Producto } from 'src/app/shared/model/product';
+import { ProductoService } from '../services/producto.service';
+
+
 
 @Component({
   selector: 'app-detalle-producto',
@@ -43,6 +46,6 @@ export class DetalleProductoComponent implements OnInit{
   }
 
   volver():void{
-    this.router.navigate(['/lista'])
+    this.router.navigate(['/mantenimiento/lista'])
   }
 }

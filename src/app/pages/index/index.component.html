@@ -1,12 +1,263 @@
-<div class="container">
-  <div class="jumbotron">
-    <h1 *ngIf="!isLogged" class="display-4">H</h1>
-    <h1 *ngIf="isLogged" class="display-4">Wenas, como estás {{nombreUsuario}}</h1>
-    <p class="lead">
-      yeahhh
+<!--<header>
+   <a href="#" class="logo">Food <span>.</span></a>
+  <div class="menuToggle" onclick="toggleMenu()"></div>
+  <ul class="navigation">
+    <li><a href="#banner" onclick="toggleMenu()">Home</a></li>
+    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+    <li><a href="#menu" onclick="toggleMenu()">Menu</a></li>
+    <li><a href="#expert" onclick="toggleMenu()">Expert</a></li>
+    <li><a href="#testimonials" onclick="toggleMenu()">Testimonials</a></li>
+    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+  </ul>
+</header>-->
+<section class="banner" id="banner">
+  <div class="content">
+    <h2>Elije siempre lo bueno</h2>
+    <p>
+      En MundiJuego, entendemos que elegir el mejor producto es fundamental para tu experiencia de juego. Nuestro equipo de expertos en videojuegos está aquí para guiarte en cada paso, ofreciéndote recomendaciones personalizadas y análisis detallados para que tomes decisiones informadas. Explora nuestra amplia gama de productos y encuentra el equipo perfecto que se adapte a tu estilo de juego y preferencias. En MundiJuego, la excelencia es nuestra norma, y tu satisfacción es nuestra prioridad.
     </p>
-    <hr class="my-4">
-    <p>Me encanta que estés aquí</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Más</a>
+    <div style="padding:30px">
+    <a href="#" class="btn">Our Menu</a>
+      </div>
   </div>
+</section>
+<section class="about" id="about">
+  <div class="row">
+    <div class="col50">
+      <h2 class="titeText"><span>A</span>bout Us</h2>
+      <p>
+        En Mundijuego, estamos apasionados por el mundo de los videojuegos. Desde los clásicos que marcaron nuestra infancia hasta las últimas y más emocionantes novedades del mundo del gaming, estamos dedicados a proporcionarte la mejor experiencia de compra de videojuegos en [Ciudad/Región].
+        Nuestra historia comenzó con un grupo de amigos que compartían una pasión común por los videojuegos. Nos dimos cuenta de que en nuestra comunidad faltaba un lugar donde los aficionados a los videojuegos pudieran encontrar todo lo que necesitaban bajo un mismo techo. Así que, decidimos crear MundiJuego, un espacio donde los gamers de todas las edades y niveles de experiencia pueden satisfacer sus necesidades y conectarse con otros apasionados por los videojuegos.
+        
+      </p>
+    </div>
+    <div class="col50">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/lila.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<section class="menu" id="menu">
+  <div class="title">
+    <h2 class="titleText">Our <span>M</span>enu</h2>
+    <p>
+      En MundiJuego, ofrecemos una diversidad de experiencias de juego para todos los gustos. Desde emocionantes juegos de acción y aventuras que te sumergen en mundos épicos hasta desafiantes juegos de estrategia que pondrán a prueba tu ingenio. También encontrarás juegos multijugador para compartir con amigos y títulos relajantes para disfrutar en solitario. Sea cual sea tu preferencia, nuestra selección cuidadosamente curada tiene algo especial para cada tipo de jugador. ¡Explora nuestro catálogo y descubre el mundo de posibilidades que tenemos para ti!
+    </p>
+  </div>
+  <div class="content">
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/rojo.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Juegos de acción</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/sonic.jpg"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Juegos arcade</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/panda.jpg"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Juegos autor</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/cuchillo.webp"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Juegos de aventuras</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/minecraft.png"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Juegos cúbicos</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/cubo.avif"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Juegos online</h3>
+      </div>
+    </div>
+  </div>
+  <div class="title">
+    <a href="#" class="btn">View All</a>
+  </div>
+</section>
+<section class="expert" id="expert">
+  <div class="title">
+    <h2 class="titleText">Our Kitchen <span>E</span>xpert</h2>
+    <p>Lorem</p>
+  </div>
+  <div class="content">
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Someone Famous</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/2.jpg"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Someone Famous</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/3.webp"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Someone Famous</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/4.avif"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <h3>Someone Famous</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="testimonials" id="testimonials">
+  <div class="title white">
+    <h2 class="titleText">They <span>S</span>aid About Us</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed
+      elit justo. Duis vel velit tellus. Phasellus et eros eu eros sagittis
+      consequat.
+    </p>
+  </div>
+  <div class="content">
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/avatar2.jpg"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          sed elit justo. Duis vel velit tellus. Phasellus et eros eu eros
+          sagittis consequat.
+        </p>
+        <h3>Someone Famous</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/avatar1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          sed elit justo. Duis vel velit tellus. Phasellus et eros eu eros
+          sagittis consequat.
+        </p>
+        <h3>Someone Famous</h3>
+      </div>
+    </div>
+    <div class="box">
+      <div class="imgBx">
+        <img
+          src="../../../assets/images/5.png"
+          alt=""
+        />
+      </div>
+      <div class="text">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          sed elit justo. Duis vel velit tellus. Phasellus et eros eu eros
+          sagittis consequat.
+        </p>
+        <h3>Someone Famous</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="title">
+    <h2 class="titleText">Contact <span>U</span>s</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed
+      elit justo. Duis vel velit tellus. Phasellus et eros eu eros sagittis
+      consequat.
+    </p>
+  </div>
+  <div class="contactForm">
+    <h3>Send Message</h3>
+    <div class="inputBox">
+      <input type="text" placeholder="Name" />
+    </div>
+    <div class="inputBox">
+      <input type="text" placeholder="Email" />
+    </div>
+    <div class="inputBox">
+      <textarea placeholder="Name"></textarea>
+    </div>
+    <div class="inputBox">
+      <input type="submit" placeholder="Send" />
+    </div>
+  </div>
+</section>
+<div class="copyrightText">
+  <p>Copyright 2022 <a href="#">Matheus F.</a> All Right Reserved</p>
 </div>
+<script src="script.js"></script>
+

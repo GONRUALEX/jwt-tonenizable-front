@@ -25,7 +25,7 @@ export class MenuComponent implements OnDestroy{
 
   onLogout():void{
     this.tokenService.logOut();
-    setTimeout(()=>this.router.navigate(['/login']),1000);
+    setTimeout(()=>this.router.navigate(['/']),1000);
   }
 
   closeModal(event:any){

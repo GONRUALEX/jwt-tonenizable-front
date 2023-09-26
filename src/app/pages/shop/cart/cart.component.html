@@ -1,0 +1,70 @@
+
+<div *ngIf="cartItems.length<1">
+  <div class="trolley text-end">
+    <h4><i class="fa-solid fa-poo animate__animated animate__bounce animate__infinite" #empty></i>Tu carrito está vacío!</h4>
+  </div>
+</div>
+<div *ngIf="cartItems.length>0">
+  <div class="trolley text-center">
+    <h4><i class="fa-solid fa-cart-shopping"></i> Tu carrito</h4>
+  </div>
+  
+  <div class="text-center articles">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of cartItems; index as i">
+        <div class="row">
+          <div class="col-lg-10 col-md-10">
+            <app-cart-item [cartItem]="item"></app-cart-item>
+          </div>
+          <div class="col-md-2 col-lg-2 trash">
+            <i class="far fa-trash-alt fa-2x" (click)="deleteItem(i)"></i>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class=" total text-center">
+    <h4 style="border-top: solid 1px teal"><strong>Total:</strong> {{total}}€</h4>
+  </div>
+  <div>
+    <button class="btn btn-clear btn-outline btn-block" (click)="clearCart()">
+      <i class="fas fa-ban"></i> Vaciar carrito
+    </button>
+  </div>
+  <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+</div>
+
+<div class="modal fade" id="modalPaypal" tabindex="-1" aria-labelledby="modalPaypalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalPaypalLabel">Compra realizada! Gracias {{address?.name?.full_name}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeModalPaypal()"></button>
+      </div>
+      <div class="modal-body">
+        <h3>Artículos:</h3>
+        <hr>
+        <div *ngFor="let item of itemsPaypal">
+          <p class="factura"><b>Name: </b> {{item.name}}<b>Units: </b>{{item.quantity}}<b>Price/unit:</b> {{item.unit_amount.value}}€</p>
+        </div>
+        <hr>
+        <div><b>Total:</b>{{amounPaypal}}€</div>
+        <hr>
+        <h3>Datos de envío:</h3>
+        <hr>
+          <p class="factura"><b>Calle: </b> {{address?.address?.address_line_1}}</p><p class="factura"><b>Población: </b>{{address?.address?.admin_area_2}}</p><p class="factura"><b>CP:</b> {{address?.address?.postal_code}}€</p><p class="factura"><b>País:</b> {{address?.address?.country_code}}€</p>
+          <p class="factura"><b>Email: </b> {{userFac?.email_address}}</p><p  class="factura"><b>Fecha: </b>{{dateFac?.create_time | date : 'yyyy-MM-dd'}}</p><p  class="factura"><b>Número factura:</b> {{facId}}</p>
+          <hr>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeModalPaypal()">Close</button>
+        <button type="button" class="btn btn-primary">Imprimir</button>
+      </div>
+    </div>
+  </div>
+</div>  
+<ngx-loading
+[show]="loading"
+[config]="{ backdropBorderRadius: '3px' }"
+
+></ngx-loading>

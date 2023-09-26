@@ -6,7 +6,7 @@ const TOKEN_KEY = 'AuthToken';
 @Injectable({
   providedIn: 'root'
 })
-export class TokenService {
+export class TokenService{
   isVarLogged: Subject<boolean> = new BehaviorSubject(false);
   isVarAdmin: Subject<boolean> = new BehaviorSubject(false)
   userName:string = "";
@@ -45,6 +45,7 @@ export class TokenService {
   }
 
   public isAdmin():void{
+    console.log("esta el token", this.getToken())
     if (!this.getToken()){
       this.sendLogged(false);
       return;
@@ -54,9 +55,11 @@ export class TokenService {
     const payloadecode = atob(payload);
     const values = JSON.parse(payloadecode);
     const roles = values.roles;
+    console.log(console.log(roles))
     if (roles.indexOf('ROLE_ADMIN')<0){
       this.sendLogged(false);
     }
+    this.sendAdmin(true);
     this.sendLogged(true);
   }
 

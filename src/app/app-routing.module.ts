@@ -9,16 +9,12 @@ import { IsAdminGuard } from './core/guards/prod-guard.service';
 import { LoginGuard } from './core/guards/login.guard';
 import { SendEmailComponent } from './core/auth/chagePassword/send-email/send-email.component';
 import { ChangePasswordComponent } from './core/auth/chagePassword/change-password/change-password.component';
-import { PrincipalComponent } from './paypal/components/principal/principal.component';
 
 const routes: Routes = [
   {path:'', component: IndexComponent},
-  {path:'principal', component: PrincipalComponent},
+  {path:'shop',  loadChildren: () => import('./pages/shop/shop.module').then(m => m.ShopModule), canActivate:[IsAdminGuard], data:{expectedRol: ['admin', 'user']}},
   {path:'change-password/:tokenpassword', component: ChangePasswordComponent, canActivate:[LoginGuard]},
-  {path:'lista', component: ListaProductoComponent, canActivate:[IsAdminGuard], data:{expectedRol: ['admin', 'user']}},
-  {path:'detalle/:id', component: DetalleProductoComponent, canActivate:[IsAdminGuard], data:{expectedRol: ['admin', 'user']}},
-  {path:'nuevo', component: NuevoProductoComponent, canActivate:[IsAdminGuard], data:{expectedRol: ['admin', 'user']}},
-  {path:'editar/:id', component: EditarProductoComponent, canActivate:[IsAdminGuard], data:{expectedRol: ['admin', 'user']}},
+  {path:'mantenimiento',  loadChildren: () => import('./pages/producto/producto.module').then(m => m.ProductoModule), canActivate:[IsAdminGuard], data:{expectedRol: ['admin', 'user']}},
   {path:'**', redirectTo:'', pathMatch: 'full'},
 ];
 

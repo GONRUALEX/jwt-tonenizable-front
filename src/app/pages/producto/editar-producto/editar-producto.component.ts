@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Producto } from 'src/app/shared/model/producto';
-import { ProductoService } from 'src/app/shared/model/service/producto.service';
+import { Producto } from 'src/app/shared/model/product';
+import { ProductoService } from '../services/producto.service';
+
+
+
 
 @Component({
   selector: 'app-editar-producto',
@@ -39,19 +42,19 @@ export class EditarProductoComponent implements OnInit{
   }
 
   onUpdate():void{
-    this.productoService.update(this.id!,this.producto!).subscribe({
+      this.productoService.update(this.id!,this.producto!).subscribe({
       next: (data)=>{
         this.toastr.success("Los cambios que has solicitado están hechos " , 'Editado con éxito', {
           timeOut:3000, positionClass: 'toast-top-center'
         });
-        this.router.navigate(['/lista'])
+        this.router.navigate(['/mantenimiento/lista'])
       },
       error:(err)=>{
         this.errMsj = err.error!=null? err.error.mensaje: "No se ha actualizado";
         this.toastr.error(this.errMsj +" 😒", 'Se ha encontrado un problema al intentar hacer el update', {
         timeOut: 3000, positionClass: 'toast-top-center'
     })
-    this.router.navigate(['/lista']);
+    this.router.navigate(['/mantenimiento/lista']);
       }
 
     });

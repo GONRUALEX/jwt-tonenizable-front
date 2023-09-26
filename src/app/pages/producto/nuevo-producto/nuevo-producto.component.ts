@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Producto } from 'src/app/shared/model/producto';
-import { ProductoService } from '../../../shared/model/service/producto.service';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Producto } from 'src/app/shared/model/product';
+import { ProductoService } from '../services/producto.service';
+
 
 @Component({
   selector: 'app-nuevo-producto',
@@ -13,6 +14,8 @@ export class NuevoProductoComponent implements OnInit {
   errMsj: string = '';
   nombre = '';
   precio?: number;
+  descripcion: string;
+  imageUrl: string;
 
   constructor(
     private ProductoService: ProductoService,
@@ -22,10 +25,10 @@ export class NuevoProductoComponent implements OnInit {
   ngOnInit(): void {}
 
   onCreate(): void {
-    const producto = new Producto(this.nombre, this.precio!);
+    const producto: Producto ={"name":this.nombre, "description":this.descripcion, "price":this.precio!.toString(), "imageUrl":this.imageUrl};
     this.ProductoService.save(producto).subscribe({
       next: (data) => {
-        this.router.navigate(['/lista']);
+        this.router.navigate(['/mantenimiento/lista']);
         this.toastr.success(
           'Nuevo producto añadido ',
           'Añadido con éxisto',
@@ -46,7 +49,7 @@ export class NuevoProductoComponent implements OnInit {
             positionClass: 'toast-top-center',
           }
         );
-        this.router.navigate(['/lista']);
+        this.router.navigate(['/mantenimiento/lista']);
       },
     });
   }

@@ -1,16 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light mb-4" >
+<nav class="navbar navbar-expand-lg navbar-light" style="z-index:99999" >
 <div class="container">
   <div class="collapse navbar-collapse navBar" id="navbarNav">
     <ul class="navbar-nav mr-auto p-2">
 
       <li class="nav-item">
-        <a class="nav-link" routerLink="/"><i class="fas fa-home"></i>Inicio</a>
+        <a class="nav-link" href="/"><i class="fas fa-home"></i>Inicio</a>
       </li>
       <li class="nav-item" *ngIf="isLogged">
-        <a class="nav-link" routerLink="/lista" *ngIf="isLogged"><i class="far fa-list-alt"></i>lista</a>
+        <a class="nav-link" href="/mantenimiento/lista" *ngIf="isLogged"><i class="far fa-list-alt"></i>lista</a>
       </li>
       <li class="nav-item" *ngIf="isLogged">
-        <a class="nav-link" routerLink="/nuevo" *ngIf="isAdmin"><i class="fas fa-plus-circle"></i>Nuevo</a>
+        <a class="nav-link" href="/mantenimiento/nuevo" *ngIf="isAdmin"><i class="fas fa-plus-circle"></i>Nuevo</a>
       </li>
 
 

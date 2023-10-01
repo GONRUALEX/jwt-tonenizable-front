@@ -1,7 +1,7 @@
 <div class="row mt-5" *ngIf="producto">
   <div class="col-md-4 mx-auto">
     <div class="card mb-3" style="background-color:bisque">
-      <img src="../../../assets/PIKACHU.png" class="card-img-top p-3" alt="...">
+      <img [src]="producto.imageUrl" class="card-img-top p-3" alt="...">
       <div class="card-body d-flex flex-column justify-content-center align-items-center">
         <h5 class="card-title" style="color:steelblue; font-weight:800">{{producto.name | uppercase}}</h5>
         <p class="card-text">{{producto.price}}</p>

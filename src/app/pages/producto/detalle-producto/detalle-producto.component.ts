@@ -5,8 +5,6 @@ import { ToastrService } from 'ngx-toastr';
 import { Producto } from 'src/app/shared/model/product';
 import { ProductoService } from '../services/producto.service';
 
-
-
 @Component({
   selector: 'app-detalle-producto',
   templateUrl: './detalle-producto.component.html',
@@ -22,7 +20,6 @@ export class DetalleProductoComponent implements OnInit{
     private router: Router,
     private toastr: ToastrService
   ){
-
   }
 
   ngOnInit(): void {

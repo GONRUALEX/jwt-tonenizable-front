@@ -2,11 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 
-![](https://i.postimg.cc/Hn0k0Ftz/galeria.png)
+![](https://i.postimg.cc/g2Z6748f/Nueva-imagen-de-mapa-de-bits.png)
 
-![](https://i.postimg.cc/MHgmRMdV/galeria.png)
+![](https://i.postimg.cc/C5Jk71yJ/Nueva-imagen-de-mapa-de-bits.png)
 
-![](https://i.postimg.cc/VNSGSw-Yx/galeria.png)
+![](https://i.postimg.cc/Z54X0sjS/Nueva-imagen-de-mapa-de-bits.png)
 
 ## Development server
 
